@@ -15,9 +15,9 @@ function HomePage() {
   return (
     <>
       <div className="relative">
-        <div className="container mx-auto">
-          <div className="flex flex-col lg:flex-row">
-            <div className="hidden lg:block lg:w-1/5">
+        <div className="container mx-auto w-full lg:w-[80%]">
+          {/* <div className="flex flex-col lg:flex-row"> */}
+            {/* <div className="hidden lg:block lg:w-1/5">
               <h5 className="font-bold text-lg mb-2">Categories</h5>
               <div className="flex flex-col space-y-2">
                 {categoryData.map((item, index) => (
@@ -30,9 +30,9 @@ function HomePage() {
                   </button>
                 ))}
               </div>
-            </div>
-            <div className="lg:w-4/5">
-              <h3 className="text-2xl font-bold mb-4 ms-4 lg:ms-0">
+            </div> */}
+            {/* <div className="lg:w-full"> */}
+              <h3 className="text-2xl font-bold mb-4 ms-4 lg:ms-0 text-center">
                 {category
                   ? `${
                       category.charAt(0).toUpperCase() + category.slice(1)
@@ -40,8 +40,8 @@ function HomePage() {
                   : "Top News"}
               </h3>
               <NewsList/>
-            </div>
-          </div>
+            {/* </div> */}
+          {/* </div> */}
         </div>
       </div>
     </>
