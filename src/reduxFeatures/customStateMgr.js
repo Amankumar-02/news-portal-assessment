@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
     category: "",
     currentPage: 1,
+    newsInfoData: [],
 }
 
 export const customStateSlice = createSlice({
@@ -15,9 +16,12 @@ export const customStateSlice = createSlice({
         setCurrentPage : (state, action)=>{
             state.currentPage = action.payload;
         },
+        setNewsInfoData : (state, action)=>{
+            state.newsInfoData = action.payload;
+        },
     }
 })
 
-export const {setCategory, setCurrentPage} = customStateSlice.actions
+export const {setCategory, setCurrentPage, setNewsInfoData} = customStateSlice.actions
 
 export default customStateSlice.reducer

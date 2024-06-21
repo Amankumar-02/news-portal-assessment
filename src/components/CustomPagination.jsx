@@ -15,7 +15,7 @@ function CustomPagination({ totalPages}) {
       pageItems.push(
         <button
           key={i}
-          className={`px-3 py-1 rounded ${i === currentPage ? 'bg-blue-500 text-white' : 'bg-gray-200'}`}
+          className={`px-3 py-1 rounded ${i === currentPage ? 'bg-blue-500 text-white' : 'bg-gray-200'} transition-all hover:scale-[1.1]`}
           onClick={() => dispatch(setCurrentPage(i))}
         >
           {i}
@@ -26,9 +26,9 @@ function CustomPagination({ totalPages}) {
   };
 
   return (
-    <div className="flex justify-center space-x-2 my-4">
+    <div className="flex justify-center space-x-2 mt-6 mb-10">
       <button
-        className={`px-3 py-1 rounded ${currentPage === 1 ? 'bg-gray-300' : 'bg-gray-200'}`}
+        className={`px-3 py-1 rounded ${currentPage === 1 ? 'bg-gray-300' : 'bg-gray-200'} transition-all hover:scale-[1.1]`}
         disabled={currentPage === 1}
         onClick={() => handlePageClick(currentPage - 1)}
       >
@@ -36,7 +36,7 @@ function CustomPagination({ totalPages}) {
       </button>
       {renderPageItems()}
       <button
-        className={`px-3 py-1 rounded ${currentPage === totalPages ? 'bg-gray-300' : 'bg-gray-200'}`}
+        className={`px-3 py-1 rounded ${currentPage === totalPages ? 'bg-gray-300' : 'bg-gray-200'} transition-all hover:scale-[1.1]`}
         disabled={currentPage === totalPages}
         onClick={() => handlePageClick(currentPage + 1)}
       >

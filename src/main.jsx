@@ -5,12 +5,13 @@ import './index.css'
 import {RouterProvider, createBrowserRouter, createRoutesFromElements, Route} from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { store } from './store/store.js';
-import HomePage from './pages/HomePage.jsx';
+import {HomePage, NewsInfo} from './pages/index.js';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App/>}>
       <Route path='/' element={<HomePage/>}/>
+      <Route path='/info/:newsTitle' element={<NewsInfo/>}/>
     </Route>
   )
 )

@@ -13,7 +13,7 @@ function useNewsData (category) {
         setLoading(true);
 
         const apiKey = import.meta.env.VITE_GNEWS_API_KEY;
-        const apiUrl = `https://newsapi.org/v2/everything?q=${category ? `${category}` : "top"}&from=2024-05-20&sortBy=publishedAt&apiKey=${apiKey}`;
+        const apiUrl = `https://newsapi.org/v2/everything?q=${category ? `${category}` : "top"}&from=2024-06-15&sortBy=publishedAt&apiKey=${apiKey}`;
         const url = apiUrl;
         const response = await fetch(url, { signal: abortController.signal });
         const data = await response.json();
